@@ -6,13 +6,18 @@
 <body>
     <h1>Betskun blogi</h1>
     <p>Hello wooorld!</p>
-    <p>It does not work!</p>
+    <p>Have a nice day!</p>
 
+
+    {% for post in posts %}
     <div>
-        <p>published: 3.11.2014, 15:20</p>
-        <h3><a href="">My first post: A</a></h3>
-        <p>Aamu alkoi automaattisesti arvoituksin.</p>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <br>
+        <br>
     </div>
+{% endfor %}
 
 
     <div>
